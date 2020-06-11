@@ -1,0 +1,11 @@
+1- É detectada uma arquitetura MVC, com um controller (ContatosController) para coordenar o fluxo de açõs, o Contato servindo como model e grade como a view. Para facilitar o uso dessa arquitetura, poderia ser usado algum framework. Como não conheço tantos frameworks PHP, eu sugiro o Codeigniter para o projeto.
+
+
+2- Bastaria colocar uma nova coluna booleana (ex.: ativo) na tabela que para que, em vez de remover o campo selecionado da tabela, ele fosse simplesmente ocultado. Exemplo:
+Em vez de dar um DELETE FROM contatos WHERE id_contato = ? a ideia da exclusão booleana é que se faça UPDATE contatos SET ativo = 0 WHERE id_contato = ?.
+
+Na prática, não seria uma exclusão de dados, mas apenas uma ocultação deles.
+
+
+4- Usando blocos try catch para validar o nome (para ver se não inclui números) e para ver se o email está em formato válido.
+
