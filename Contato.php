@@ -151,7 +151,7 @@ class Contato
     public static function destroy($id)
     {
         $conexao = Conexao::getInstance();
-        if ($conexao->exec("DELETE FROM contatos WHERE id='{$id}';")) {
+        if ($conexao->exec("DELETE FROM contatos WHERE id_user='{$id}';")) {
             return true;
         }
         return false;
